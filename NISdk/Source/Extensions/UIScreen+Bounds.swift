@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UIScreen {
     public var deviceScreenWidth: CGFloat {
         let screenBounds = UIScreen.main.bounds

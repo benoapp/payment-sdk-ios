@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 @objc public class NISdkColors: NSObject {
     public var cardPreviewColor = UIColor(hexString: "#171618")
     public var cardPreviewLabelColor = UIColor.white

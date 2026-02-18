@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UIView {
     func getUILayoutDirection() -> UIUserInterfaceLayoutDirection {
         let language = NISdk.sharedInstance.sdkLanguage

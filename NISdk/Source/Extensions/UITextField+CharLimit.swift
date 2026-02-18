@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UITextField {
     func hasReachedCharacterLimit(for string: String, in range: NSRange, with limit: Int) -> Bool {
         let currentCharacterCount = text?.count ?? 0

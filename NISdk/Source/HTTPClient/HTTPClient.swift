@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 public enum HTTPClientErrors: Error {
     case missingUrl
 }

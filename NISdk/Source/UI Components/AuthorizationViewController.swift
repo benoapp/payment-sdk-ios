@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class AuthorizationViewController: UIViewController {
     var authorizationLabel: UILabel {
         let authLabel = UILabel()

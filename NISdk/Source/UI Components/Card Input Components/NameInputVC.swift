@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 class NameInputVC: UIViewController, UITextFieldDelegate {
     let nameTextField: UITextField = UITextField()
     @objc let onChangeName: onChangeTextClosure

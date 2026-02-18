@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 extension UIFont {
     
     static func RegisterFont(withFilenameString filenameString: String, in bundle: Bundle) {
