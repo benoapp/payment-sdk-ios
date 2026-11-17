@@ -27,7 +27,13 @@ private class NISdkBundleLocator {}
         UIFont.RegisterFont(withFilenameString: "OCRA.otf", in: bundle)
     }
     
+    /// The SDK's resources: strings, card logos, currency symbols, fonts. Swift Package Manager
+    /// packages them as `NISdk_NISdk.bundle`, reachable only through `Bundle.module`; the CocoaPods
+    /// lookup below never found it, so every string showed its raw key ("Pay Button Title").
     func getBundle() -> Bundle {
+        #if SWIFT_PACKAGE
+        return Bundle.module
+        #else
         if let bundle = Bundle(path: "NISdk.bundle") {
             return bundle
         } else if let path = Bundle(for: NISdkBundleLocator.self).path(forResource: "NISdk", ofType: "bundle"),
@@ -37,6 +43,7 @@ private class NISdkBundleLocator {}
             let bundle = Bundle(for: NISdkBundleLocator.self)
             return bundle
         }
+        #endif
     }
     
     func getBundleFor(language: String) -> Bundle {
